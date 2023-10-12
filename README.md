@@ -27,11 +27,13 @@ The sample graph structure used in the program is composed of 6 nodes marked A-F
     
     C -> D
     
-    D -> C
+    C -> E
     
+    D -> E
+    
+    D -> F
+
     E -> F
-    
-    F -> C
 
 ## Graph Visualisation
 
