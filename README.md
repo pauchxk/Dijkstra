@@ -32,3 +32,14 @@ The sample graph structure used in the program is composed of 6 nodes marked A-F
     E -> F
     
     F -> C
+
+## Graph Visualisation
+
+![image](https://github.com/pauchxk/Djikstra/assets/58793330/62f1a511-449f-4d4f-b99b-2878d9b54c32)
+
+## Sources
+https://www.bogotobogo.com/python/python_graph_data_structures.php
+
+https://www.python.org/doc/essays/graphs/
+
+https://docs.python.org/3/tutorial/classes.html
