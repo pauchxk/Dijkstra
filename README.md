@@ -1,5 +1,5 @@
 # Djikstra
-Translating Djikstra's algorithm for graph traversal into Python.
+Translating Djikstra's algorithm for graph traversal into Python; part of CW1 for Core Computing Concepts
 ## What is it?
 Djikstra’s algorithm is an algorithm created to find the shortest path between nodes within a weighted graph. The original algorithm would find the shortest path between two given nodes, but a more common variant is used that fixes a single node as the ‘source’ and finds the shortest paths to all other nodes in the graph, producing a shortest-path tree. The algorithm is commonly used for things like maps, where the weight of the edges represents distance. The algorithm runs in quadratic time complexity O(n^2), where n is the number of nodes.
 ## The Algorithm
@@ -14,3 +14,14 @@ Djikstra’s algorithm is an algorithm created to find the shortest path between
 5: If the destination node has been marked visited (for a path going from node A to node B), stop. The algorithm has finished. 
 
 6: Otherwise, select the unvisited node that is marked with the smallest tentative distance, set it as the new current node, and go back to step 3. 
+
+## Graph Structure
+The sample graph structure used in the program is composed of 6 nodes marked A-F, and 8 arcs:
+    A -> B
+    A -> C
+    B -> C
+    B -> D
+    C -> D
+    D -> C
+    E -> F
+    F -> C
