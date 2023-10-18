@@ -1,4 +1,4 @@
-#NOTE: This is NOT my code. This program is taken from
+#NOTE: This is NOT my program. This program is taken from
 #https://www.educative.io/answers/how-to-implement-a-graph-in-python
 #I have just cleaned up + added data, in order to understand graph
 #traversal within Python.
