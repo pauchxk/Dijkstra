@@ -18,23 +18,23 @@ Djikstra’s algorithm is an algorithm created to find the shortest path between
 ## Graph Structure
 The sample graph structure used in the program is composed of 6 nodes marked A-F, and 9 arcs:
     
-    A - B
+    A - B 11
     
-    A - C
+    A - C 16
     
-    B - C
+    B - C 14
     
-    B - D
+    B - D 18
     
-    C - D
+    C - D 10
     
-    C - E
+    C - E 17
     
-    D - E
+    D - E 15
     
-    D - F
+    D - F 12
 
-    E - F
+    E - F 16
 
 ## Graph Visualisation
 
