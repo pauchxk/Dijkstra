@@ -1,52 +1,52 @@
 import adjacency_matrix
 
-class Djikstra:
+class Dijkstra:
     
     
     def __init__(self):
+
         self.graph = adjacency_matrix.graph
+        self.nodes = adjacency_matrix.nodes
+
         self.unvisited_nodes = []
+
+        self.start = str('A')
         self.destination = str()
-        self.location = str('A')
-        self.nodes = adjacency_matrix.vertices
-        
+
+        self.current_node = self.start
+        self.next_node = str()
+
+        self.tentative_distance = {
+            'A': 0,
+            'B': 999,
+            'C': 999,
+            'D': 999,
+            'E': 999,
+            'F': 999
+            }
+
         self.selectDestination()
-        
-        
-    def markNodesUnvisited(self):
-        for node in self.nodes:
-            if node == self.location:
-                pass
-            else:
-                self.unvisited_nodes.append(node)
-                
-    
-    def tentativeDistance(self, node):
-        if node == self.location:
-            return int(0)
-        else:
-            return float(inf)
-        
-        
+
+
     def selectDestination(self):
-        
-        destination_found = False
         
         print('Graph representation:')
         self.printGraphRepresentation()
         print()
+
+        destination_found = False
         
         while destination_found == False:
             
-            self.destination = str(input(f'\nYour current location is {self.location}. Enter destination: ').upper())
+            self.destination = str(input(f'\nYour start point is {self.start}. Enter destination: ').upper())
 
-            if self.destination == self.location:
-                print('\nDestination cannot be your current location. Pick again.')
+            if self.destination == self.start:
+                print('\nDestination cannot be your start point. Pick again.')
                 
             else:
                 destination_found = True
         
-        print(f'\nYou are travelling from {self.location} to {self.destination}.')
+        print(f'\nYou are travelling from {self.start} to {self.destination}.')
         self.markNodesUnvisited()
     
     
@@ -55,4 +55,27 @@ class Djikstra:
         for i in self.graph:
             print(i)
         
-Djikstra()
+        
+    def markNodesUnvisited(self):
+
+        for node in self.nodes:
+
+            if node == self.start:
+                pass
+
+            else:
+                self.unvisited_nodes.append(node)
+
+        print(f'\nNodes {self.unvisited_nodes} are unvisited.')
+
+        self.next_node = self.graph[0][1]
+        self.algorithm(self.current_node, self.next_node)
+                
+    
+    def algorithm(self, cur, v): 
+        #for the current node, consider all of its unvisited neighbors.
+        for neighbors in 
+
+
+        
+Dijkstra()
