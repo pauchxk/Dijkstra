@@ -5,17 +5,17 @@ import sys
 
 class Graph:
     def __init__(self):
-        self.nodes = set()
-        self.edges = {}
+        self.nodes = set() #stores set of all nodes in the graph
+        self.edges = {} #dictionary where each key is a node, and its corresponding value is a list of tuples, each representing an edge to a neighbouring node and its weight
 
     def add_node(self, value):
-        self.nodes.add(value)
-        if value not in self.edges:
+        self.nodes.add(value) #allows you to add nodes to the graph
+        if value not in self.edges: #if node is not in the list of edges above, initialize empty list of edges
             self.edges[value] = []
 
-    def add_edge(self, from_node, to_node, weight):
-        self.edges[from_node].append((to_node, weight))
-        self.edges[to_node].append((from_node, weight))
+    def add_edge(self, from_node, to_node, weight): #appends a tuple representing the neighbouring node and the weight to the list of edges, both to and from.
+        self.edges[from_node].append((to_node, weight)) #e.g. {'A': [('B', 11)]}
+        self.edges[to_node].append((from_node, weight)) #e.g. {'B': [('A', 11)]}
 
     def dijkstra(self, start_node, end_node):
         unvisited = {node: sys.maxsize for node in self.nodes}
@@ -55,7 +55,9 @@ class Graph:
                         break
 
             path.insert(0, start_node)
-
+        
+        print(self.nodes)
+        print(self.edges)
         return path
 
 # Example usage
