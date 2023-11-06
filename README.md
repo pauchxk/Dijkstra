@@ -16,7 +16,7 @@ Dijkstra’s algorithm is an algorithm created to find the shortest path between
 6: Otherwise, select the unvisited node that is marked with the smallest tentative distance, set it as the new current node, and go back to step 3. 
 
 ## Graph Structure
-The sample graph structure used in the program is composed of 6 nodes marked A-F, and 9 arcs:
+The sample graph structure used in the program is composed of 6 nodes marked A-F, and 9 nodes:
     
     A - B    11
     
